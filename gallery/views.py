@@ -7,9 +7,14 @@ def home_page(request):
 
 
 def albums_by_category(request,category):
-    return render(request,'search.html')   \
+    return render(request,'index.html')   \
 
 
 
 def albums_by_location(request,location):
-    return render(request,'search.html')            
+    return render(request,'index.html')     
+
+
+def search_results(request):
+
+    pass
