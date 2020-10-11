@@ -7,7 +7,7 @@ def home_page(request):
 
 
 def albums_by_category(request,category):
-    return render(request,'index.html')   \
+    return render(request,'index.html')  
 
 
 
