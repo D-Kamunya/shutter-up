@@ -61,8 +61,7 @@ class Image(models.Model):
     image_description = models.CharField(max_length =255)
     location = models.ForeignKey(Location,
     on_delete=models.CASCADE)
-    category = models.ForeignKey(Category,
-    on_delete=models.CASCADE)
+    category = models.ManyToManyField(Category)
     upload_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

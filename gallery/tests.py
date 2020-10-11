@@ -78,8 +78,10 @@ class ImageTestClass(TestCase):
         self.new_category = Category(name = 'Travel')
         self.new_category.save_category()
 
-        self.new_image= Image(image_name = 'Mt.Kenya',image_path='uploads/1517648653757.jpg' ,image_description = 'This is a random test Image',location = self.nairobi,category=self.new_category)
+        self.new_image= Image(image_name = 'Mt.Kenya',image_path='uploads/1517648653757.jpg' ,image_description = 'This is a random test Image',location = self.nairobi)
         self.new_image.save_image()
+
+        self.new_image.category.add(self.new_category)
 
     # Tear Down method
     def tearDown(self):
