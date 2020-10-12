@@ -1,9 +1,11 @@
 from django.shortcuts import render
 from django.http  import HttpResponse
-
+from .models import Image
 # Create your views here.
 def home_page(request):
-    return render(request,'index.html')
+    images=Image.get_all_images()
+    print(images)
+    return render(request,'index.html',{"images":images})
 
 
 def albums_by_category(request,category):
