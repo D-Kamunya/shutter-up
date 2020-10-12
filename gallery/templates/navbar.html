@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
 {% endblock %}
 <nav class="mb-1 navbar navbar-expand-lg navbar-light fixed-top">
-  <a class="navbar-brand" href="#"><img src="https://img.icons8.com/nolan/96/camera.png"/>Shutter Up</a>
+  <a class="navbar-brand" href="{% url 'home_page'%}"><img src="https://img.icons8.com/nolan/96/camera.png"/>Shutter Up</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
     aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -19,9 +19,9 @@
           aria-haspopup="true" aria-expanded="false">Locations
         </a>
         <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          {%for location in locations%}
+          <a class="dropdown-item" href="{% url 'album_location' location_id=location.id%}">{{location.city}},{{location.country}}</a>
+          {%endfor%}
         </div>
       </li>
       <li class="nav-item dropdown">
