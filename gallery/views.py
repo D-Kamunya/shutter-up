@@ -31,4 +31,14 @@ def albums_by_location(request,location_id):
 
 def search_results(request):
 
-    pass
+    if 'category' in request.GET and request.GET["category"]:
+        search_term = request.GET.get("category")
+        images = Image.search_image(search_term)
+        message = f"{search_term}"
+
+        return render(request, 'search.html',{"message":message,"images": images,"categories":get_categories(),"locations":get_locations()})
+
+    else:
+        message = "You haven't searched for any term"
+        return render(request, 'search.html',{"message":message,"categories":get_categories(),"locations":get_locations()})
+
