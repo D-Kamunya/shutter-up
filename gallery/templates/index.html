@@ -1,7 +1,42 @@
 {%extends 'base.html'%}
 {%block content%}
-<div class="container">
-  <h2>WElcome to shutter up</h2>
+<div class="container-fluid">
+  <div class="demo gallery row no-gutters">
+    
+    <div class="mx-auto  my-auto zoom col-md-4 col-lg-3 col-sm-12">
+      <a class="photo" href="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" data-caption="Caption 1">
+        <img class="image" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg">
+        <span class="details">
+          <span class="details-heading">dsdds</span><br>
+          <span class="details-body">yubhssss</span>
+          <div style="display: flex;">
+            <h5><span class="badge"><i class="fas fa-map-marker-alt"></i> sss, sdssd</span> 
+              <button class="btn btn-sm no-border text-white"><i class="far fa-copy"></i></button>
+            </h5>
+          </div>
+          <small><p><i class="far fa-clock mr-2"></i>2 days ago</p> </small>  
+        </span>
+      </a>
+    </div>
+    
+  </div>
 
 </div>
 {%endblock %}
+{%block scripts%}
+<script>
+
+  baguetteBox.run('.demo', {
+  captions: true, // display image captions.
+  buttons: 'auto', // arrows navigation
+  fullScreen: false,
+  noScrollbars: false,
+  bodyClass: 'baguetteBox-open',
+  titleTag: false,
+  async: false,
+  preload: 2,
+  animation: 'slideIn', // fadeIn or slideIn
+  verlayBackgroundColor: 'rgba(0,0,0,.8)'
+});
+</script>
+{%endblock%}
