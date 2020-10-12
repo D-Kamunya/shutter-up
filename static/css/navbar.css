@@ -8,3 +8,27 @@ nav li a {
   letter-spacing: .05em;
   font-family:'Sintony', sans-serif;
 }
+@media screen and (min-width: 992px){
+
+  nav.navbar.navbar-expand-lg.navbar-light{
+      height: 80px;
+      font-size: 14px;
+      padding: 10px 18px;
+      text-transform: uppercase;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+      background-color:#fff;
+      font-size: 17px;
+  
+  }
+  div#navbarNav.collapse.navbar-collapse{
+      width: 100%;
+  }
+  ul.navbar-nav{
+      padding-left: 100px;
+  }
+  li.nav-item{
+      padding:0px  20px;
+  }
+  
+  }
