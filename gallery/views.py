@@ -22,7 +22,11 @@ def albums_by_category(request,category):
 
 
 def albums_by_location(request,location_id):
-    return render(request,'index.html')     
+
+    images=Image.filter_by_location(location_id)
+    location=Location.objects.get(pk=location_id)
+    tag='locations'
+    return render(request,'browser.html',{"tag":tag,"images":images,"location":location})     
 
 
 def search_results(request):
