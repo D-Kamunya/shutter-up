@@ -11,6 +11,8 @@ shutter-up V1.0
 ## Description
 Shutter Up is a photo gallery web application to showcase pictures taken. Users get can view photos uploaded by admin. Users can see photos based on the location, by clicking on the listed locations in location dropdown navnar link.They can also search for photos based on the categories.
 
+## Live link
+Live application can be found at https://shutterup.herokuapp.com
 ## User Story
 * User can view all photos on index page ordered by the date they were posted
 * Hovering on an image will reveal more information about it; the title, description, location and time posted.
