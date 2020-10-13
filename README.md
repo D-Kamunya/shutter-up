@@ -58,9 +58,9 @@ Here is a run through of how to set up the application:
     * Create .env file and paste paste the following filling where appropriate:
 
     * - SECRET_KEY = '<Secret_key>'
-    * - DBNAME = 'gallery'
-    * - USER = '<Username>'
-    * - PASSWORD = '<password>'
+    * - DBNAME = 'shutter_up'
+    * - USER = 'Username'
+    * - PASSWORD = 'password'
     * - DEBUG = True
 * **Step 8** : Run initial Migration
     * python3 manage.py makemigrations gallery
