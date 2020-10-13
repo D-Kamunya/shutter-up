@@ -31,7 +31,7 @@
 
 <body class="body">
   {% include "navbar.html" %}
-  <div style="padding-top:90px" class="content container-fluid">
+  <div class="content container">
     
   {% block content %}{% endblock content %}
   </div>
@@ -47,6 +47,7 @@
   <!-- Specific Page JS goes HERE  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.9.0/baguetteBox.css" integrity="sha512-ggFlAPXXhLDEdI5njwQVP/Zfwga089afP3Y72sWt8Drcx7+7VpmCbjdOb3P0ZRAYUQvlnaW5i7oFGyk7U1dkkg==" crossorigin="anonymous" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.9.0/baguetteBox.js" integrity="sha512-nPnvrZm6fVyzO7k3Z3+ppKmHEhS74ShQQU1gCQgkiaY7XyxJ5g2JWXN8PtWaoknbd82S0HZj6RK02Jd8gZKGSg==" crossorigin="anonymous"></script>
+  <script src="{% static 'js/base.js' %}" ></script>
   {% block scripts %}
  
   {% endblock scripts %}

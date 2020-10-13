@@ -1,17 +1,17 @@
 {%extends 'base.html'%}
 {%block content%}
 <div class="container-fluid">
-  <div class="demo gallery row no-gutters">
+  <div class="demoo gallerry row">
     {%for image in images%}
-    <div class="mx-auto  my-auto zoom col-md-4 col-lg-3 col-sm-12">
+    <div class="zoom mx-auto col-md-4 col-lg-3 col-sm-12">
       <a class="photo" href="{{image.image_path.url}}" data-caption="{{image.image_name}}">
-        <img class="image" src="{{image.image_path.url}}">
+        <img style="min-height:200px ;" class="image img-fluid" src="{{image.image_path.url}}">
         <span class="details">
           <span class="details-heading">{{image.image_name}}</span><br>
           <span class="details-body">{{image.image_description}}</span>
           <div style="display: flex;">
             <h5><span class="badge"><i class="fas fa-map-marker-alt"></i>{{image.location.city}}, {{image.location.country}}</span> 
-              <button class="btn btn-sm no-border text-white"><i class="far fa-copy"></i></button>
+              <button class="btn btn-sm badge-default no-border text-white"><i class="far fa-copy"></i></button>
             </h5>
           </div>
           <small><p><i class="far fa-clock mr-2"></i>{{image.upload_date|timesince}}</p> </small>  
@@ -23,20 +23,3 @@
 
 </div>
 {%endblock %}
-{%block scripts%}
-<script>
-
-  baguetteBox.run('.demo', {
-  captions: true, // display image captions.
-  buttons: 'auto', // arrows navigation
-  fullScreen: false,
-  noScrollbars: false,
-  bodyClass: 'baguetteBox-open',
-  titleTag: false,
-  async: false,
-  preload: 2,
-  animation: 'slideIn', // fadeIn or slideIn
-  verlayBackgroundColor: 'rgba(0,0,0,.8)'
-});
-</script>
-{%endblock%}
