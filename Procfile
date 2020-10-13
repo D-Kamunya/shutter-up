@@ -1,0 +1,1 @@
+web: gunicorn shutterup.wsgi --log-file -
