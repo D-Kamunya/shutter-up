@@ -11,7 +11,8 @@ $(document).ready(function(){
     async: false,
     preload: 2,
     animation: 'slideIn', // fadeIn or slideIn
-    verlayBackgroundColor: 'rgba(0,0,0,.8)'
+    verlayBackgroundColor: 'rgba(0,0,0,.8)',
+    filter: /.*ucarecdn.*/i
   });
   $(function() {
     $('button.navbar-toggler').click(function() {

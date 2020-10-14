@@ -1,6 +1,7 @@
 from django.db import models
 import datetime as dt
 import pyperclip
+from pyuploadcare.dj.models import ImageField
 # Create your models here.
 
 class Location(models.Model):
@@ -57,7 +58,7 @@ class Image(models.Model):
     Image class to define Image Objects
     """
     image_name = models.CharField(max_length =150)
-    image_path = models.ImageField(upload_to = 'uploads/')
+    image_path = ImageField(blank=True, manual_crop="")
     image_description = models.CharField(max_length =255)
     location = models.ForeignKey(Location,
     on_delete=models.CASCADE)

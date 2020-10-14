@@ -17,8 +17,8 @@
     <div class="demoo gallerry row">
       {%for image in images%}
       <div class="zoom mx-auto col-md-4 col-lg-3 col-sm-12">
-        <a class="photo" href="{{image.image_path.url}}" data-caption="{{image.image_name}}">
-          <img style="min-height:200px ;" class="image img-fluid" src="{{image.image_path.url}}">
+        <a class="photo" href="{{image.image_path.cdn_url}}" data-caption="{{image.image_name}}">
+          <img style="min-height:200px ;" class="image img-fluid" src="{{image.image_path.cdn_url}}">
           <span class="details">
             <span class="details-heading">{{image.image_name}}</span><br>
             <span class="details-body">{{image.image_description}}</span>
